@@ -3,13 +3,13 @@ import ControlBar from "../molecules/ControlBar";
 import Header from "../molecules/Header";
 import Listings from "../molecules/Listings";
 
-export default function Home ({results}) {
+export default function Home () {
     return (
         <>
         <Header/>
         <ControlBar/>
-        <Listings results={results}/>
-        <Link to='/details'>Details</Link>
+        <Listings/>
+        {/* <Link to='/details'>Details</Link> */}
         </>
     )
 }
