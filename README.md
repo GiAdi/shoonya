@@ -1,3 +1,10 @@
+Open terminal in the project directory,
+Run <npm i>
+Run <npm start>
+App will run in the browser.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
