@@ -3,7 +3,7 @@ import styled from "styled-components";
 export default function ListingCard({ data }) {
     return (
         <CardContainer>
-            <StyledImage src={data.image}/>
+            <StyledImage src={data.image} />
             <CardTitle>
                 {data.title}
             </CardTitle>

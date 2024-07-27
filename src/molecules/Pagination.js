@@ -10,7 +10,7 @@ export default function Pagination() {
     const currentPage = +searchParams.get('page') || 1;
 
     const handlePageChange = (_) => {
-        setSearchParams( params => {
+        setSearchParams(params => {
             const paramsObj = Object.fromEntries(params);
             const newPage = (_ === 'inc') ? (currentPage + 1) : (currentPage - 1);
             return { ...paramsObj, page: newPage };
@@ -20,8 +20,8 @@ export default function Pagination() {
 
     return (
         <PaginationContainer>
-            <Button disabled={currentPage <= 1} onClick={()=>handlePageChange('dec')}>Previous</Button>
-            <Button disabled={(retreats?.length < 3)}onClick={()=>handlePageChange('inc')}>Next</Button>
+            <Button disabled={currentPage <= 1} onClick={() => handlePageChange('dec')}>Previous</Button>
+            <Button disabled={(retreats?.length < 3)} onClick={() => handlePageChange('inc')}>Next</Button>
         </PaginationContainer>
     )
 }

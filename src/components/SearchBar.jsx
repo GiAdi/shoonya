@@ -15,7 +15,7 @@ export default function SearchBar({ handleChange }) {
 
     return (
         <SearchContainer>
-        <StyledSearch type='text' onChange={debouncedChangeHandler} placeholder="Search retreats by title"/>
+            <StyledSearch type='text' onChange={debouncedChangeHandler} placeholder="Search retreats by title" />
         </SearchContainer>
     )
 }
