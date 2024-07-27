@@ -1,5 +1,7 @@
 import { useSearchParams } from "react-router-dom";
 import { useSelector } from 'react-redux';
+import styled from "styled-components";
+import Button from "../atoms/Button";
 
 export default function Pagination() {
 
@@ -17,10 +19,15 @@ export default function Pagination() {
     }
 
     return (
-        <>
-            <button disabled={currentPage <= 1} onClick={()=>handlePageChange('dec')}>Prev</button>
-            {currentPage}
-            <button disabled={(retreats?.length < 3)}onClick={()=>handlePageChange('inc')}>Next</button>
-        </>
+        <PaginationContainer>
+            <Button disabled={currentPage <= 1} onClick={()=>handlePageChange('dec')}>Previous</Button>
+            <Button disabled={(retreats?.length < 3)}onClick={()=>handlePageChange('inc')}>Next</Button>
+        </PaginationContainer>
     )
 }
+
+const PaginationContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+`;
